@@ -1,0 +1,53 @@
+﻿@using FarukEmlak.Models
+@using FarukEmlak.Controllers
+
+@model List<Kiralik>
+
+@*//style="background-color:#b18282*@
+
+
+
+    <div style="margin-left:400px;width:1100px;height:1300px;">
+        <h1 style="margin-left:300px">KİRALIK EVLER </h1>
+        <div style="margin-left:30px;margin-right:30px">
+            <table class="table table-bordered" style="background-color:#ccb5b5;">
+                <tr>
+                    <th> BAŞLIK</th>
+                    <th> ID</th>
+                    <th> KİRA </th>
+                    <th> ODA SAYISI</th>
+                    <th> METRE KARE</th>
+                    <th> BULUNDUĞU KAT</th>
+                    <th> ŞEHİR</th>
+                    <th> DETAYLAR</th>
+
+
+
+                </tr>
+                <tbody>
+                    @foreach (var kira in Model)
+                    {
+                        <tr>
+                            <td>@kira.Baslik</td>
+                            <td>@kira.KiralikID</td>
+                            <td>@kira.Kira</td>
+                            <td>@kira.Odasay</td>
+                            <td>@kira.MetreKare m2</td>
+                            <td>@kira.Bulunkat</td>
+                            <td>@kira.Sehir</td>
+                            <td><a href="/Kiralik/bilgi/@kira.KiralikID" class="btn btn-primary" style="background-color:#b18282">DETAYLAR</a></td>
+                        </tr>
+                    }
+
+                </tbody>
+            </table>
+
+        </div>
+
+
+    </div>
+
+
+
+
+

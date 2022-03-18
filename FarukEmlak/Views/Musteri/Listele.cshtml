@@ -1,0 +1,40 @@
+﻿@using FarukEmlak.Models
+@using FarukEmlak.Controllers
+
+@model List<Musteri>
+@{
+    ViewData["Title"] = "Listele";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@*//style="background-color:#b18282*@
+
+
+<table class="table table-bordered" style="background-color:#ccb5b5;">
+    <tr>
+        <th> AD SOYAD</th>
+        <th> TC NO</th>
+        <th> YAŞ </th>
+        <th> TELEFON </th>
+        <th> PAROLA</th>
+
+
+
+
+    </tr>
+    <tbody>
+        @foreach (var kira in Model)
+        {
+        <tr>
+            <td>@kira.AdSoyad</td>
+            <td>@kira.TCno</td>
+            <td>@kira.Yas</td>
+            <td>@kira.Telno</td>
+            <td>@kira.Parola</td>
+
+            <td><a href="/Kiralik/bilgi/" class="btn btn-danger" style="background-color:#b18282">SİL</a></td>
+        </tr>
+        }
+
+    </tbody>
+</table>
+

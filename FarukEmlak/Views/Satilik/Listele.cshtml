@@ -1,0 +1,41 @@
+﻿@using FarukEmlak.Models
+@using FarukEmlak.Controllers
+
+@model List<Satilik>
+@{
+    ViewData["Title"] = "Listele";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1 style="margin-left:300px">SATILIK EVLER </h1>
+<div style="margin-left:30px;margin-right:30px">
+    <table class="table table-bordered" style="background-color:#ccb5b5;">
+        <tr>
+            <th> BAŞLIK</th>
+            <th> FİYAT </th>
+            <th> ODA SAYISI</th>
+            <th> METRE KARE</th>
+            <th> BULUNDUĞU KAT</th>
+            <th> ŞEHİR</th>
+            <th> DETAYLAR</th>
+
+
+
+        </tr>
+        <tbody>
+            @foreach (var kira in Model)
+            {
+                <tr>
+                    <td>@kira.Baslik</td>
+                    <td>@kira.Fiyat</td>
+                    <td>@kira.Odasay</td>
+                    <td>@kira.MetreKare m2</td>
+                    <td>@kira.Bulunkat</td>
+                    <td>@kira.Sehir</td>
+                    <td><a href="/Satilik/bilgi/@kira.SatilikID" class="btn btn-primary" style="background-color:#b18282">DETAYLAR</a></td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+</div>

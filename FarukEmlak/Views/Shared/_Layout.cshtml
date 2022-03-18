@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body style="background-color:#a78989">
+    <nav class="navbar navbar-default">
+        <div class="container-fluid" style="background-color:#e9d8d8">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/Home/Index/" style="color:#8d6b6b; font-size:40px">FarukEmlak</a>
+            </div>
+            <ul class="nav navbar-nav" style="font-size:large">
+                <li style=" ackground-color:#e9d8d8;margin-left:400px; color:red;  font-size:x-large;color:white" class="btn btn-outline-primary" ><a href="/Satilik/listele">Satılık</a></li>
+                <li style=" background-color:#e9d8d8; margin-left:20px; font-size:x-large;color:white " class="btn btn-outline-primary"><a href="/Kiralik/listele2">Kiralık</a></listyle="margin-left:400px">
+                <li style=" background-color:#e9d8d8; margin-left:20px; font-size:x-large;color:red" class="btn btn-outline-primary"><a href="/Home/ilanversec/">İlan Ver</a></listyle="margin-left:400px">                
+                <li style=" margin-left:480px; background-color:white; font-size:small"  class="btn btn-outline-warning " ><a href="/login/giris">GİRİŞ</a></li>
+                <li style=" background-color:white; margin-left:20px; font-size:small" class="btn btn-outline-warning" ; ><a href="/login/Kayit">KAYIT</a></li>
+                <li style=" background-color:white; margin-left:20px; font-size:small" class="btn btn-outline-warning" ; ><a href="/login/admin">ADMİN</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div style="background-color:#e9d8d8; width:1200px; height:auto; margin-left:350px ">
+        <div>
+            <br /><br /><br />
+            @RenderBody()
+            <br /><br /><br />
+        </div>
+
+    </div>
+
+</body>
+</html>

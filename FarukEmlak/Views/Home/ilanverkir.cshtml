@@ -1,0 +1,65 @@
+﻿
+@{
+    ViewData["Title"] = "ilanverkir";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model FarukEmlak.Models.Kiralik
+
+<div style="width: 600px; height: auto; margin-left: 300px; background-color: #8d6b6b">
+    <div style=" margin-left: 50px;margin-right:50px">
+        <br /><br />
+        <h1 style="margin-left:100px;color:white">Yeni Kiralık İlan Ekle</h1>
+        <br />
+       
+        <form class="form-group" method="post">
+            <b style=" color: white">Ev Sahibi ID</b><br />
+            @Html.TextBoxFor(x => x.MusteriID, new { @class = "form-control" })
+            <br />
+            <b style=" color: white">Kira</b><br />
+            @Html.TextBoxFor(x => x.Kira, new { @class = "form-control" })
+            <br />
+            <b style=" color: white">Oda Sayısı</b><br />
+            @Html.TextBoxFor(x => x.Odasay, new { @class = "form-control" })
+            <br />
+            <b style=" color: white">MetreKare</b><br />
+            @Html.TextBoxFor(x => x.MetreKare, new { @class = "form-control" })
+            <br />
+            <b style=" color: white">Bina Yaşı</b><br />
+            @Html.TextBoxFor(x => x.Binayas, new { @class = "form-control" })
+            <br />
+            <b style=" color: white">Bina Kat Sayısı</b><br />
+            @Html.TextBoxFor(x => x.Binakat, new { @class = "form-control" })
+            <br />
+            <b style=" color: white">Bulunduğu Kat</b><br />
+            @Html.TextBoxFor(x => x.Bulunkat, new { @class = "form-control" })
+            <br />
+            <b style=" color: white">Cephe</b><br />
+            @Html.TextBoxFor(x => x.Cephe, new { @class = "form-control" })
+            <br />
+            <b style=" color: white">İlan Tarihi</b><br />
+            @Html.TextBoxFor(x => x.İlanTarih, new { @class = "form-control" })
+            <br />
+            <b style=" color: white">Durum</b><br />
+            @Html.TextBoxFor(x => x.Durum, new { @class = "form-control" })
+            <br />
+            <b style=" color: white">Şehir</b><br />
+            @Html.TextBoxFor(x => x.Sehir, new { @class = "form-control" })
+            <br />
+            <b style=" color: white">Semt</b><br />
+            @Html.TextBoxFor(x => x.Semt, new { @class = "form-control" })
+            <br />
+            <b style=" color: white">Mahalle</b><br />
+            @Html.TextBoxFor(x => x.Mahalle, new { @class = "form-control" })
+            <br />
+            <b style=" color: white">Adres</b><br />
+            @Html.TextBoxFor(x => x.Adres, new { @class = "form-control" })
+            <br />
+            <b style=" color: white">Başlık</b><br />
+            @Html.TextBoxFor(x => x.Baslik, new { @class = "form-control" })
+            <br />
+            <button class="btn btn-info">ONAYLA</button><br /><br />
+        </form>
+    </div>
+</div>
+

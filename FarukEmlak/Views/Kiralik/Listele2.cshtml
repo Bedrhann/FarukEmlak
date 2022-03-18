@@ -1,0 +1,50 @@
+﻿@using FarukEmlak.Models
+@using FarukEmlak.Controllers
+
+@*@model FarukEmlak.Models.Kiralik*@
+
+@{
+    ViewData["Title"] = "Listele2";
+    Layout = "~/Views/Shared/_SearchLayout.cshtml";
+}
+
+
+
+<div style="height:1300px;width:1500px">
+    <div style="height:1300px;background-color:#705a5a;width:300px;float:left">
+        <form class="form-group" method="post">
+            <br />
+            <h1 style="color:white">FİLTRELE</h1>
+            <div>
+                <label style="color:white">KİRA</label>
+                <input type="text" class="form-control" name="AdSoyad" />
+            </div>
+            <br />
+            <div>
+                <label style="color:white">ŞEHİR</label>
+                <input type="text" class="form-control" name="AdSoyad" />
+            </div>
+            <br />
+            <div>
+                <label style="color:white">ODA SAYISI</label>
+              
+            </div>
+            <br />
+            <div>
+                <a href="/Kiralik/Listele2/ " class="btn btn-primary" style="background-color:#b18282">ARA</a>
+            </div>
+            <br />
+        </form>
+
+    </div>
+    
+
+    <div>
+        @Html.Partial("parcalistele")
+    </div>
+    
+
+</div>
+
+
+

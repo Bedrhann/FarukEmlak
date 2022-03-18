@@ -1,0 +1,78 @@
+﻿@using FarukEmlak.Controllers
+@using FarukEmlak.Models
+
+@{
+    ViewData["Title"] = "bilgi";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model List<Kiralik>
+
+<div>
+    <div style="margin-left:30px;margin-right:30px">
+        <table class="table table-bordered" style="background-color:#ccb5b5;">
+            <tr>
+                <th> BAŞLIK</th>
+                <th> KİRA </th>
+                <th> ODA SAYISI</th>
+                <th> METRE KARE</th>
+                <th> BİNA YAŞI</th>
+                <th> BİNA KAT SAYISI</th>
+                <th> BULUNDUĞU KAT</th>
+                <th> CEPHE</th>
+                <th> İLAN TARİHİ</th>
+                <th> ŞEHİR</th>
+                <th> SEMT</th>
+                <th> MAHALLE</th>
+                <th> ADRES</th>
+
+
+
+            </tr>
+            <tbody>
+                @foreach (var x in Model)
+                {
+                    <tr>
+                        <td>@x.Baslik</td>
+                        <td>@x.Kira</td>
+                        <td>@x.Odasay</td>
+                        <td>@x.MetreKare m2</td>
+                        <td>@x.Binayas</td>
+                        <td>@x.Binakat </td>
+                        <td>@x.Bulunkat</td>
+                        <td>@x.Cephe</td>
+                        <td>@x.İlanTarih</td>
+                        <td>@x.Sehir</td>
+                        <td>@x.Semt</td>
+                        <td>@x.Mahalle</td>
+                        <td>@x.Adres</td>
+
+
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+    </div>
+    <div style="width:600px;margin-left:300px">
+        <table class="table table-bordered" style="background-color:#ccb5b5;">
+            <tr>
+                <th> EV SAHİBİ</th>
+                <th> YAŞ</th>
+                <th> TELEFON</th>
+            </tr>
+            <tbody>
+                @foreach (var x in Model)
+                {
+                    <tr>
+                        <td>@x.Musteri.AdSoyad </td>
+                        <td>@x.Musteri.Yas </td>
+                        <td>@x.Musteri.Telno </td>
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+    </div>
+
+
+</div>
